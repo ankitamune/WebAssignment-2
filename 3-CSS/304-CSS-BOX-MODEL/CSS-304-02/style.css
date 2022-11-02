@@ -1,1 +1,74 @@
 /* start your css here */
+/* start your css here */
+body{
+    margin: 0;
+    padding: 0px;
+}
+.container{
+    margin:10px;
+    width: 600px;
+    height: 600px;
+    background-color: black;
+}
+.head{
+    margin: 20px;
+    font-weight: bolder;
+    padding-top:3px ;
+}
+h2{
+    color: white;
+}
+.form{
+    width: 400px;
+    height: 350px;    
+    color: #fff;
+}
+.form input[type="name"],input[type="surname"],[type="email"] ,input[type="birthday"]{
+    border: none;
+    border: 2px solid #fff;
+    width: 130%;
+    height: 60px;
+    margin: 10px;
+    margin-left: 40px;
+    background: transparent;
+    outline: none;
+    background-color: white;
+    font-weight: 5rem;
+    
+}
+.footer{
+    color: white;
+    display: flex;
+    margin: 0px;
+}
+.main{
+    padding-top: 30px;
+    size: 20px;
+    margin-left:20px ;
+}
+.main1{
+    padding-top: 10px;
+    size: 20px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+::placeholder{
+    font-size: 20px;
+    padding-left: 10px;
+    color: black;
+}
+a{
+    color: white;
+}
+
+button{
+    padding: 10px 40px;
+    font-size: 15px;
+    align-items: center;
+    margin-left: 250px;
+    background-color: black;
+    color: white;
+    border: solid;
+    border-color: white;
+}
