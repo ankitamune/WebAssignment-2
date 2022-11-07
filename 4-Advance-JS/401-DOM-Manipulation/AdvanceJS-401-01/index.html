@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+    <style>
+      input{
+       margin-top: 20%;
+       width: 200px;
+       height: 30px;
+       
+      }
+    </style>
+</head>
+<body>
+    <center>
+      <input type="text" id="input-field">
+      <p id="wrote"></p>
+    </center>
+    <script >
+      const input=(e)=>{
+      const text=document.getElementById('wrote');
+      const value=(e.target.value);
+        text.innerHTML=value;
+      }
+
+
+    document.getElementById('input-field').addEventListener('input',input);
+    </script>
+</body>
 </html>

@@ -67,8 +67,10 @@ body{
 .search_bar_container{
     min-width: 304px;
     width: 708px;
+    
 }
 .search_bar{
+    display: flex;
     max-width: 564px;
     width: 100%;
     margin-left: 10px;
@@ -102,6 +104,7 @@ body{
     letter-spacing: 1px;
     height: 32px;
     padding: 6px 40px;
+   
     font-weight: bold;
     margin: 0px 10px;
     cursor: pointer;
@@ -109,11 +112,7 @@ body{
     font-size: 16px;
 }
 ._3-PJz- {
-    /* display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center; */
+  
     align-items: center;
     line-height: 20px;
     font-size: 16px;
@@ -147,4 +146,17 @@ body{
     height:64px;
     width: 64px;
     margin-bottom:3px ;
+}
+.go{
+    margin-right: 20px;
+    text-decoration: none;
+}
+.go a{
+    text-decoration: none;
+}
+.more_lan{
+    color: #f1f1f1;
+}
+.cart_lan{
+    color: #f1f1f1;
 }
