@@ -77,100 +77,61 @@
     </style>
   </head>
   <body>
-    <h1>The Drum Kit</h1>
-  
-    <div class="all">
-        <button class="w button">w</button>
-        <button class="a button">a</button>
-        <button class="s button">s</button>
-        <button class="d button">d</button>
-        <button class="j button">j</button>
-        <button class="k button">k</button>
-        <button class="l button">l</button>
+    
+    <div class="set">
+     <button class="w drum">w</button>
+     <button class="a drum">a</button>
+     <button class="s drum">s</button>
+     <button class="d drum">d</button>
+     <button class="j drum">j</button>
+     <button class="k drum">k</button>
+     <button class="l drum">l</button>
     </div>
-    <script>
-      var numberOfDrumButtons = document.querySelectorAll(".drum").length;
-
-for (var i = 0; i < numberOfDrumButtons; i++) {
-
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-
-    var buttonInnerHTML = this.innerHTML;
-
-    makeSound(buttonInnerHTML);
-
-    buttonAnimation(buttonInnerHTML);
-
-  });
-
+<script>
+  for(var i=0;i<document.querySelectorAll('.drum').length;i++){ 
+  document.getElementsByClassName('drum')[i].addEventListener('click',function(){
+    var buttontext=this.innerHTML;
+    console.log("key has been clicked");
+    // console.log(buttontext);
+    makesound(buttontext);
+  })
 }
-
-document.addEventListener("keypress", function(event) {
-
-  makeSound(event.key);
-
-  buttonAnimation(event.key);
-
-});
-
-
-function makeSound(key) {
-
-  switch (key) {
-    case "w":
-      var tom1 = new Audio("sounds/tom-1.mp3");
-      tom1.play();
-      break;
-
-    case "a":
+  document.addEventListener("keypress",function(e){
+    console.log("key has been pressed")
+    // console.log(e.key);
+    makesound(e.key);
+  })
+  function makesound(buttontext){
+    if(buttontext=='w'){
+        var tom1=new Audio("sounds/tom-1.mp3");
+        tom1.play();
+    }
+    if (buttontext == "a") {
       var tom2 = new Audio("sounds/tom-2.mp3");
       tom2.play();
-      break;
-
-    case "s":
-      var tom3 = new Audio('sounds/tom-3.mp3');
+    }
+    if (buttontext == "s") {
+      var tom3 = new Audio("sounds/tom-3.mp3");
       tom3.play();
-      break;
-
-    case "d":
-      var tom4 = new Audio('sounds/tom-4.mp3');
+    }
+    if (buttontext == "d") {
+      var tom4 = new Audio("sounds/tom-4.mp3");
       tom4.play();
-      break;
-
-    case "j":
-      var snare = new Audio('sounds/snare.mp3');
+    }
+    if (buttontext == "j") {
+      var snare = new Audio("sounds/snare.mp3");
       snare.play();
-      break;
-
-    case "k":
-      var crash = new Audio('sounds/crash.mp3');
-      crash.play();
-      break;
-
-    case "l":
-      var kick = new Audio('sounds/kick-bass.mp3');
+    }
+    if (buttontext == "k") {
+      var kick = new Audio("sounds/kick-bass.mp3");
       kick.play();
-      break;
-
-    default: console.log(key);
-
+    }
+    if (buttontext == "l") {
+      var crash = new Audio("sounds/crash.mp3");
+      crash.play();
+    }
   }
-}
-
-
-function buttonAnimation(currentKey) {
-
-  var activeButton = document.querySelector("." + currentKey);
-
-  activeButton.classList.add("pressed");
-
-  setTimeout(function() {
-    activeButton.classList.remove("pressed");
-  }, 100);
-
-}
-
-
-    </script>
-  </body>
+</script>
+</body>
 </html>
+    
