@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="406-01.css">
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
-</html>
+</head>
+<body>
+    
+    <h1>World countries List</h1>
+    <h4>Total Number of Countries:193</h4>
+    <form id="search-form">
+        <input id="search-field" type="text" placeholder="Enter the country">
+    </form>
+      <table id="table">
+      </table>
+      <script src="/4-Advance-JS/406-Data-visualization/AdvanceJS-406-01/countries.js"></script>   
+        <script>
+    
+          const showres=(e)=>{
+    
+            display(e.target.value);
+          }
+          function display(element){
+            const filter=countries_data.filter((value)=>{
+              if(value.name.startsWith(element)){
+                 return true;
+              }
+              return false;
+            });
+ 
+          const parent = document.getElementById("table");
+          parent.innerHTML="";
+          filter.forEach((e)=>{
+          const new_row=document.createElement("tr");
+          const new_countries=document.createElement("td");
+          new_countries.innerHTML=e.name;
+          new_row.appendChild(new_countries);
+          parent.appendChild(new_row);
+ 
+    });
+  }
+ 
+  document.getElementById("search-form").addEventListener("keyup",showres);
+ </script>
+</body>

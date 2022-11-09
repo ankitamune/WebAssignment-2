@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      :root{
+    --black:#000000;
+    --white:#FFFFFF;
+      }
+      body{
+        background-color:var(--black);
+        color:var(--white);
+      }
+    </style>
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+</head>
+<body>
+<div class="container">
+    <h1>
+        Emoji 🔍 Application
+    </h1>
+    <form id="search-form">
+        <input type="text" placeholder="emoji search" id="search-field">
+        <input type="submit" value="search">
+    </form>
+    <table id="search_result_container">
+        
+    </table>
+</div>
+<script src="EmojiList.js"></script>
+<script>
+  const autosearch = (e) =>{
+    const value=e.target.value;
+    displaySearchResults(value);
+} 
+const displaySearchResults=(searchQuery="")=>{
+    const filter=emojiList.filter(e=>{
+        if(e.description.indexOf(searchQuery)!==-1){
+            return true;
+        }
+        if(e.aliases.some(elem=>elem.startsWith(searchQuery))){
+            return true;
+        }
+
+    })
+    const parent = document.getElementById("search_result_container");
+    parent.innerHTML="";
+    filter.forEach((e)=>{
+        const new_row=document.createElement("tr");
+        const new_emoji=document.createElement("td");
+        const new_aliases=document.createElement("td");
+        const new_desc=document.createElement("td");
+        new_emoji.innerHTML=e.emoji;
+        new_aliases.innerHTML=e.aliases.join(",");
+        new_desc.innerHTML=e.description;
+
+        new_row.appendChild(new_emoji);
+        new_row.appendChild(new_aliases);
+        new_row.appendChild(new_desc);
+        parent.appendChild(new_row);
+    })
+}
+
+
+document.getElementById("search-form").addEventListener("keyup",autosearch);
+
+displaySearchResults();
+</script>
+</body>
 </html>
