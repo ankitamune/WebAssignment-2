@@ -1,5 +1,5 @@
 nav{
-    width: 70%;
+    width: 60%;
     background-color: rgb(21, 2, 39);
     padding: 20px;
     color: white;
@@ -17,14 +17,6 @@ a{
 img{
     margin-bottom: -10px;
 }
-/* .btn_search{
-    background: rgb(50, 3, 95);;
-    
-    padding: 4px 12px 4px 8px;
-    width: 44px;
-    height: 36px;
-    cursor: pointer;
-    border-radius:0px 2px 2px 0px ;
-    color: #2874f0;
-    font-size: 19px;
-} */
+.icon{
+    color: white;
+}
