@@ -1,1 +1,74 @@
 /* start your styling here  */
+body {
+    
+    font: 300 1em "Fira Sans", sans-serif;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+
+}
+.main1{
+    display: flex;
+}
+button{
+    background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+.success{
+    border-color:rgb(67, 240, 52) ;
+    color: rgb(67, 240, 52);
+}
+.success:hover{
+    background-color: rgb(67, 240, 52);
+    color: white;
+}
+.info{
+    border-color:skyblue ;
+    color:skyblue;
+}
+.info:hover{
+    background-color: skyblue;
+    color: white;
+}
+.warning{
+    border-color:orange ;
+    color:orange;
+}
+.warning:hover{
+    background-color: orange;
+    color: white;
+}
+.danger{
+    border-color:red ;
+    color:red;
+}
+.danger:hover{
+    background-color: red;
+    color: white;
+}
+.defult{
+    border-color:grey ;
+    color:gray;
+}
+.defult:hover{
+    background-color: grey;
+    color: white;
+}

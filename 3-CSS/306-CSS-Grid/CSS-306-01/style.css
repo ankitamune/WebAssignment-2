@@ -14,76 +14,76 @@
     
 }
 .box1{
-    background-color: aqua;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 1/3;
     grid-row: 1/2;
 }
 .box2{
-    background-color: blueviolet;
+    background-image: linear-gradient(45deg, #cbabfb 0%, #fb7ef6 60%);
     grid-column: 3/11;
     grid-row: 1/3;
 }
 .box3{
-    background-color:violet;
+    background-image: linear-gradient(45deg, #79ebe0 0%, #70c1fb 60%);
     grid-column: 11/15;
     grid-row: 1/2;
 }
 .box4{
-    background-color: red;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 1/3;
     grid-row: 2/3;
 }
 .box5{
-    background-color: greenyellow;
+    background-image: linear-gradient(45deg, #79ebe0 0%, #70c1fb 60%);
     grid-column: 11/15;
     grid-row: 2/3;
 }
 .box6{
-    background-color: orange;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 1/3;
     grid-row: 3/4;
 }
 .box7{
-    background-color: pink;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 3/5;
     grid-row: 3/4;
 }
 .box8{
-    background-color: yellowgreen;
+    background-image: linear-gradient(45deg, #cbabfb 0%, #fb7ef6 60%);
     grid-column: 5/11;
     grid-row: 3/5;
 }
 .box9{
-    background-color: skyblue;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 11/13;
     grid-row: 3/4;
 }
 .box10{
-    background-color: rebeccapurple;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 13/15;
     grid-row: 3/4;
 }
 .box11{
-    background-color: rebeccapurple;
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 1/3;
     grid-row: 4/5;
 }
 .box12{
-    background-color: rgb(153, 51, 144);
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 3/5;
     grid-row: 4/5;
 }
 .box13{
-    background-color: rgb(153, 88, 51);
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 11/13;
     grid-row: 4/5;
 }
 .box14{
-    background-color: rgb(78, 51, 153);
+    background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%);
     grid-column: 13/15;
     grid-row: 4/5;
 }
-.shape {
+/* .shape {
     background: #fff;
     height: 20px;
     text-align: center;
@@ -97,4 +97,4 @@
     transform: rotate(-45deg);
     vertical-align: middle;
       width:60px;
-  }
+  } */
