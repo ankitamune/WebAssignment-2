@@ -26,108 +26,108 @@ grid-template-rows: repeat(8,1fr);
 /* gap: 10px; */
 margin: 6px 200px;
 }
-.item1{
+.img1{
     border: 2px solid rgb(0, 0, 0);
     grid-column: 1/3;
     grid-row: 1/2;
     border-top: 4px solid rgb(124, 199, 243);
 }
-.item1 img{
+.img1 img{
     width: 100%;
 height: 100%;
 object-fit: cover;
 }
-.item2{
+.img2{
     border: 2px solid rgb(69, 47, 47);
     grid-column: 3/5;
     grid-row: 1/2;
-    border-top: 2px solid rgb(124, 199, 243);
+    border-top: 4px solid rgb(124, 199, 243);
 
 }
-.item2 img{
+.img2 img{
     width: 100%;
 height: 100%;
 object-fit: cover;
 }
-.item3{
+.img3{
     border: 2px solid rgb(42, 4, 4);
     grid-row: 1/3;
-grid-column: 5/7;
-/* border-top: 2px solid red; */
+    grid-column: 5/7;
+
 border-top: 4px solid rgb(124, 199, 243);
 }
-.item3 img{
+.img3 img{
     width: 100%;
-height: 100%;
-object-fit: fill;
+    height: 100%;
+    object-fit: fill;
 }
-.item4{
+.img4{
     border: 2px solid black;
     grid-row: 1/3;
 grid-column: 7/10;
 /* border-top: 2px solid red; */
 border-top: 4px solid rgb(124, 199, 243);
 }
-.item4 img{
+.img4 img{
     width: 100%;
-height: 100%;
-object-fit: fill;
+    height: 100%;
+    object-fit: fill;
 }
 
-.item5{
-    border: 2px solid rgb(11, 7, 7);
+.img5{
+    border: 2px solid black;
     grid-column: 1/4;
     grid-row: 2/3;
 }
-.item5 img{
+.img5 img{
     width: 100%;
-height: 100%;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
-.item6{
-    border: 2px solid rgb(15, 2, 2);
+.img6{
+    border: 2px solid black;
     grid-column: 4/5;
     grid-row: 2/3;
 }
-.item6 img{
+.img6 img{
     width: 100%;
-height: 100%;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
-.item7{
-    border: 2px solid rgb(10, 2, 2);
+.img7{
+    border: 2px solid black;
     grid-column: 1/4;
     grid-row: 3/5;
 }
-.item7 img{
+.img7 img{
     width: 100%;
-height: 100%;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
-.item8{
-    border: 2px solid rgb(0, 0, 0);
+.img8{
+    border: 2px solid black;
     grid-column: 4/8;
     grid-row: 3/5;
 }
-.item8 img{
+.img8 img{
     width: 100%;
-height: 100%;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
-.item9{
-    border: 2px solid rgb(42, 4, 4);
+.img9{
+    border: 2px solid black;
     grid-column: 8/10;
     grid-row: 3/5;
 
 }
-.item9 img{
+.img9 img{
     width: 100%;
-height: 100%;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
 }
 .navbar-bottom{
     margin: -750px 195px;
 }
 .navbar-bottom a{
-color: black;
+color: rgb(82, 78, 78);
 }
