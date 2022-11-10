@@ -16,6 +16,9 @@
       body {
     background-image: url(ProjectImage/galaxy.gif);
   }
+  #section{
+    display: flex;
+  }
   .para-1 {
     color: white;
     font-size: 50px;
@@ -37,9 +40,14 @@
     height: 35px;
     border-radius: 5px;
     outline: none;
+    margin-left: 10px;
   }
+ 
   .btn-sec {
+    
     height: 37px;
+
+    margin-left: 10px;
     background-color: gray;
     color: white;
     font-weight: 700;
@@ -71,13 +79,14 @@
     color: white;
     font-size: 40px;
   }
+  
     </style>
   </head>
   <body>
     <p class="para-1">Calculate a weight of an object on a planet</p>
     <div class="container">
       <div class="row">
-        <div class="col-md-5 mx-auto mt-5">
+        <div class="col-md-5 mx-auto mt-5" id="section">
           <input type="number" placeholder="Mass in Kilogram" id="mass" />
           <select name="" id="planetSelec" onchange="fn(event)">
             <option value="selectPlanet" selected disabled >
@@ -95,7 +104,7 @@
             <option value="pluto">PLUTO</option>
           </select>
           <button class="btn-sec" onclick="calWeight()">
-            Calculate Weight
+            Calculate 
           </button>
         </div>
       </div>

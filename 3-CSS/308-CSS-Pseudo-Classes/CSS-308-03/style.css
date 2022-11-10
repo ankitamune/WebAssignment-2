@@ -24,18 +24,18 @@ li.nav-item a{
     font-weight: 600;
 }
 nav.navbar{
-    background-color: rgba(250,229,150,1)!important;
+    background-color: #fae596 !important;
+    
 }
 .main{
     position: absolute;
-margin: 86px 0px;
-display: flex;
- 
+    margin: 86px 0px;
+    display: flex;
     justify-content: space-evenly;
 }
 div.main-1{
     margin-left: 30px;
-padding: 0px 71px;
+    padding: 0px 71px;
 }
 .main2{
     display: flex;
