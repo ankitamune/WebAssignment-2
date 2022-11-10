@@ -1,1 +1,19 @@
 /* start your styling here  */
+.main{
+    display: flex;
+}
+.flex{
+    width: 400px;
+    height: 500px;
+    background-color: orange;
+}
+h1{
+   text-align: center;
+   padding-top: 20px;
+}
+button{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+}

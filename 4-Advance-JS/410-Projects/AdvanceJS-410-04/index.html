@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="410-04.css">
+    <style>
+      *{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* background-color: rgb(7, 46, 131); */
+}
+.input{
+    text-align: center;
+    margin: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 500px;
+    height: 600px; */
+}
+input[type='text']{
+    height: 43px;
+    width: 500px;
+    display: block;
+    background-color: rgba(62, 191, 150, 0.144);
+    border-radius: 10px;
+    padding: 20px;
+}
+input[type='submit']{
+   cursor: pointer; 
+   height: 40px;
+   width: 80px;
+   margin-top: 15px;
+   border-radius: 5px;
+   background-color: rgba(44, 25, 211, 0.511);
+   color:white;
+   border: none;
+   font-size:1.1rem ;
+   
+}
+.display{
+    text-align: center;
+}
+.name{
+    /* text-align: center; */
+    background-color: rgba(0, 0, 255, 0.361);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+}
+h1{
+  margin: auto;
+  
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    color: rgb(7, 46, 131);
+}
+    </style>
     <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+</head>
+<body>
+    <h1>Weather App using Javascript</h1>
+    <form class="input">
+        <input type="text" id="inputValue" placeholder="Enter a city">
+        <input type="submit" value="Submit">
+    </form>
+    <div class="display">
+        <h1 class="name">
+            <p class="desc"></p>
+            <p class="temp"></p>
+            <p class="windspeed"></p>
+        </h1>
+    </div>
+    <script src="410-04.js"></script>
+    <script>
+      var inputValue = document.querySelector(".input");
+var windspeed = document.querySelector(".windspeed");
+var temp = document.querySelector(".temp");
+var desc = document.querySelector(".desc");
+var apiKey = "1fdbf0a2f50cd3d40b9b0a5017429296";
+
+function input (e){
+e.preventDefault();
+var word=document.getElementById('inputValue').value;
+// console.log(word);
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${word}&appid=${apiKey}`).then((response)=>response.json()).then((data)=>{
+    console.log(data)
+ var tempValue=data.main.temp
+ var descValue=data.weather[0].description
+ var windspeedValue=data.wind.speed;
+ temp.innerHTML= 'Temperature:' + ' ' + tempValue;
+ desc.innerHTML = 'Sky Conditions:' + ' ' + descValue;
+ windspeed.innerHTML ='Wind Speed:'+ ' ' + windspeedValue;
+
+})
+   
+}
+
+
+
+inputValue.addEventListener('submit',input);
+    </script>
+</body>
 </html>

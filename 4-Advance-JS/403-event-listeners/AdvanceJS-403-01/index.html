@@ -10,13 +10,32 @@
         margin: auto;
         top: 20%;
       } */
+      .keyboard{
+       margin-left: 40%;
+       margin-top: 20%;
+       width: 250px;
+       height: 40px;
+       border-color: aqua;
+      }
+     ::placeholder{
+        /* font: 1.3em sans-serif; */
+        color: black;
+      } 
+      #ans{
+        text-align: center;
+        font: 2.2em sans-serif;
+      }
+      .keyboard[type=text]{
+        font: 1.5em sans-serif;
+      }
     </style>
     <title>Document</title>
 </head>
 <body>
-        <div class="container">
+  
+         <div class="container">
         <input type="text" class="keyboard" placeholder="You Pressed">
-          <div id="keycode">
+          <!-- <div id="keycode"> -->
          <!-- <p id="text">keycode</p> -->
            <p id="ans"></p>
          </div>
@@ -27,7 +46,7 @@
      </div>   
     <script>
       const keyBoard = document.querySelector(".keyboard");
-
+     
       keyBoard.addEventListener("keyup",(e)=>{
       let key = document.getElementById("key-text");
       let ans=document.getElementById('ans');

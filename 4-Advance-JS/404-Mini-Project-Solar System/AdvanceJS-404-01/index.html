@@ -7,6 +7,80 @@
     <title>Document</title>
   </head>
   <body>
-    Start your code here
+    <select name="select1" id="select1" onchange="process_selection(this)">
+      <option value="">-- choose one --</option>
+        <option value="0">Earth</option>
+        <option value="1">Venus</option>
+        <option value="2">Mars</option>
+       <option value="3">Jupiter</option>
+       <input type="text" name="123" id="text1" 
+         onchange="process_selection(this)" placeholder=""> N
+      </select>
+         <br>
+     
+         <select name="select2" id="select2" onchange="process_selection(this)"> 
+      <option value="">-- choose one --</option>
+       <option value="0">Earth</option>
+        <option value="1">Venus</option>
+       <option value="2">Mars</option>
+        <option value="3">Jupiter</option> 
+     
+          <input type="text" name = "123" id="text2" 
+          onchange="process_selection(this)" placeholder=""> N
+     
+     
+       </select>
+       <script>
+         function process_selection(obj)
+        {
+       
+       
+       var input1 = document.getElementById("select1").value;
+       var input2 = document.getElementById("select2").value;
+       var texta = document.getElementById("text1");
+       var textb = document.getElementById("text2");
+       
+       
+       if(input1 == input2)
+       {
+           alert("Please select other planet");
+       }
+        if(texta.value != "")
+          {
+            document.getElementById("text2").disabled = true ;
+       
+         } 
+        if(textb.value != "")
+        {
+          document.getElementById("text1").disabled = true ;
+
+ }
+
+   // var xx = input1.options[input1.selectedIndex].value;
+  var SurfaceGravityEarth = 1;
+  var SurfaceGravityVenus= 0.907;
+  var SurfaceGravityMars= 0.377;
+  var SurfaceGravityJupiter= 2.364;
+  var weight1 , weight2;
+   // var sg1;
+   //  var sg2;
+
+  if (input1 == "0"  ) 
+ {
+
+weight1 = document.getElementById("text1") * SurfaceGravityEarth;
+}
+
+  if (input2 == "1"  ) 
+  {
+  weight2 = document.getElementById("text1") * SurfaceGravityVenus ;
+  document.getElementById("text2").value= weight2 ;
+  } 
+
+}
+       </script>
+
+       
+
   </body>
 </html>
