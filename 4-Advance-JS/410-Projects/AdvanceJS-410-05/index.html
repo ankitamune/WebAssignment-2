@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="style.css">
     <style>
       body{
-    background-color: #ffbead;
+    background-color: #fab8a7;
   }
   .container{
     width: 600px;
-height: 400px;
-border: 2px solid red;
-margin: 100px auto;
-box-shadow: 9px 8px 12px 4px #ee532c;
-border-radius: 14px;
-background-color: #ffd4c7;
+    height: 450px;
+    border: 2px solid red;
+    margin: 100px auto;
+    box-shadow: 9px 8px 12px 4px #ee532c;
+    border-radius: 14px;
+    background-color: #fca88f;
   }
   h2{
     font-size: 35px; 
     font-size: 35px;
-padding: 0px 32px; 
+    padding: 0px 30px; 
   }
   h3{
     text-align: right; 
-    margin:-21px 77px;
+    margin:-20px 77px;
      font-size: x-large;
      font-family: 'Mulish', sans-serif;
   }
   hr{
     margin: 31px 40px;
-height: 2px;
-background-color: black;
+    height: 2px;
+    background-color: black;
   }
   .last-item{
     display: flex;
@@ -44,10 +44,10 @@ background-color: black;
   }
   form button{
     background: linear-gradient(45deg, #ef5b35, #ffd4c7);
-border: 2px solid black;
-padding: 7px 17px;
-margin: -8px -38px;
-cursor: pointer;
+    border: 2px solid black;
+    padding: 7px 17px;
+    margin: -8px -38px;
+    cursor: pointer;
   }
     </style>
   </head>
@@ -69,14 +69,14 @@ cursor: pointer;
    </div>
    <script>
     const form= document.querySelector("form");
-const  quote=document.querySelector("#quote");
-const author=document.querySelector("#author");
-const btn=document.querySelector("#btn");
-const get=document.querySelector("#get");
+    const  quote=document.querySelector("#quote");
+    const author=document.querySelector("#author");
+    const btn=document.querySelector("#btn");
+    const get=document.querySelector("#get");
 
 
 
-const getQuote= async()=>{
+    const getQuote= async()=>{
     const res=fetch("https://type.fit/api/quotes");
     const data=await (await res).json();
     const num=Math.floor(Math.random()*data.length);
@@ -91,8 +91,8 @@ const getQuote= async()=>{
 
 
 
-}
-btn.addEventListener("click",getQuote)
+  }
+    btn.addEventListener("click",getQuote)
 
 
     getQuote()
