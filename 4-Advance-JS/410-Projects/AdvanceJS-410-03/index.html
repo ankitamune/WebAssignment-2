@@ -4,30 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>410-03</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    font-family: 'Mulish', sans-serif;
+    background-color: #235454;
+    color: white;
+}
+.header{
+    text-align: center;
+  }
+  .header h1{
+    font-size:70px;
+  }
+  .header h4{
+    font-size:20px;
+    margin: -50px 1px;
+  }
+  form{
+    text-align: center;
+    margin-top: 70px;
+  }
+  input{
+    width: 400px;
+    height: 30px;
+    border: 3px solid rgb(14, 17, 17);
+    outline: none;
+  }
+  #img{
+    text-align: center;
+    margin-top: 30px;
+    
+  }
+    </style>
   </head>
+ 
   <body>
-    <nav>
-      <div class="container">
-          <h1>
-              Mile Finder
-          </h1>
-      </div>
-      </nav>
-      <section class="input container">
-          <h2>
-              Find the perfect meal to dine upon
-          </h2>
-          <div class="form_wrap">
-              <div class="input_wrap">
-                  <input type="text" id="input" placeholder="type a word">
-                  <button id="search"> Search</button>
-              </div>
-          </div>
-      </section>
-      <section class="data container">
-          <p class="def"></p>
-          <div class="not_found"></div> 
-      </section>
+    
+    <div class="header">
+      <h1>Meal Finder</h1>
+      <h4>Find the ferfect meal to the dine upon</h4>
+    </div>
+    <form action="">
+      <input type="search" placeholder="find here " id="search">
+    </form>
+
+    <div id="img">
+      <img src="" alt="img" width="80px">
+    </div>
+    <script src=>
+        const form=document.querySelector("form");
+const search=document.getElementById("search");
+const img=document.getElementById("img")
+
+const getName=async (data)=>{
+    const dataGet=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${data}`)
+    const newData= await dataGet.json();
+    console.log(newData);
+    showData(newData)
+}
+
+const showData= async(newData)=>{
+   img.innerHTML=` <div id="img">
+   <img src="${newData.meals[0].strMealThumb}" alt="img" width="250px">
+ </div>`
+ search.value=""
+}
+
+form.addEventListener("submit",function(event){
+    var data=search.value;
+    console.log(data);
+    event.preventDefault()
+    getName(data);
+})
+    </script>
   </body>
 </html>
