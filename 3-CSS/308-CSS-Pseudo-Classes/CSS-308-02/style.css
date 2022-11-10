@@ -1,4 +1,4 @@
-/* start your styling here  */
+start your styling here 
 /* .container{
     display: inline-block;
     width: 30%;
@@ -47,9 +47,7 @@
     background-color: aqua;
     display: block;
 } */
-body{
-    display: flex;
-}
+
 .main{
     display: flex;
 }
