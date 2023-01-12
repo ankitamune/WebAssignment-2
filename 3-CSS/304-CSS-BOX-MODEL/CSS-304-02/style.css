@@ -3,12 +3,14 @@
 body{
     margin: 0;
     padding: 0px;
+    
 }
 .container{
     margin:10px;
     width: 600px;
     height: 600px;
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .head{
     margin: 20px;
@@ -62,17 +64,18 @@ h2{
 #check{
     width: 30px;
     height: 30px;
-    border-radius: 5px;
+    border-radius:50%;
+   
 }
 a{
     color: white;
 }
 
 button{
-    padding: 10px 40px;
-    font-size: 15px;
+    padding: 10px 50px;
+    font-size: 20px;
     align-items: center;
-    margin-left: 250px;
+    margin-left: 200px;
     background-color: black;
     color: white;
     border: solid;
